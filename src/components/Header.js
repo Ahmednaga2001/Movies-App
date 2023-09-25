@@ -9,7 +9,7 @@ export default function Header({search}) {
   }
 
   return (
-    <header class="bg-dark py-3">
+    <header class="bg-dark py-3 fixed-top">
     <div class="container">
       <div class="row">
         <div class="col-md-2 brand">

@@ -1,34 +1,31 @@
-import React from 'react'
-import ReactPaginate from 'react-paginate';
+import React from "react";
+import ReactPaginate from "react-paginate";
 
-export default function Pagination({getPage}) {
-  const handlePageClick = (data)=>{
-    getPage(data.selected+1)
-
-  }
+export default function Pagination({ getPage }) {
+  const handlePageClick = (data) => {
+    getPage(data.selected + 1);
+  };
   return (
-    <section className='pagination d-flex justify-content-center'>
+    <section className="py-3 pagination d-flex justify-content-center">
       <ReactPaginate
         breakLabel="..."
         nextLabel="التالى >"
-        onPageChange={handlePageClick} 
+        onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={12}
         previousLabel="<السابق"
         renderOnZeroPageCount={null}
-
-        containerClassName='pagination'
-        pageClassName='page-item'
-        pageLinkClassName='page-link'
-
-        nextClassName='page-item'
-        nextLinkClassName='page-link'
-        previousClassName='page-item'
-       previousLinkClassName='page-link'
-
-       activeClassName='active'
-        />
-
-</section>
-  )
+        containerClassName="pagination"
+        pageClassName="page-item"
+        pageLinkClassName="page-link"
+        nextClassName="page-item"
+        nextLinkClassName="page-link"
+        previousClassName="page-item"
+        previousLinkClassName="page-link"
+        breakClassName="page-item"
+        breakLinkClassName="page-link"
+        activeClassName="active"
+      />
+    </section>
+  );
 }
